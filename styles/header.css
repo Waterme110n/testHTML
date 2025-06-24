@@ -110,6 +110,9 @@ nav .navigation .ButtNav {
   top: calc(5vh + 17px);
   left: -50px;
 }
+.dropdown-content-off{
+  display: none;
+}
 
 .two-columns {
   width: calc(240px*2 + 52px*1);
