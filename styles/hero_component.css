@@ -1,0 +1,97 @@
+.welcome {
+    display: flex;
+    flex-direction: row;
+    column-gap: 48px;
+    background-color: #0040b0;
+    margin-top: 40px;
+    padding: 58px 13vw;
+    height: fit-content;
+
+}
+
+.welcome .leftColumn {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}
+
+.welcome .leftColumn h2 {
+    color: white;
+    font-family: "72 Brand Variable", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 20px;
+
+}
+
+.welcome .leftColumn p {
+    color: white;
+    font-family: "72 Brand Variable", sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+    padding-bottom: 16px;
+}
+
+.welcome .leftColumn .searchMenu {
+    margin-top: 8px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.searchMenu select {
+    font-size: 16px;
+    width: 25%;
+    color: #475e75;
+    font-family: "72 Brand Variable", sans-serif;
+    border-radius: 100px 0px 0px 100px;
+    border: 1px solid #585656;
+    padding: 6px 0px 6px 16px;
+}
+
+.searchMenu input[type=text] {
+    border-radius: 0px 100px 100px 0;
+    border: 1px solid #585656;
+    border-left: none;
+    padding: 6px 60px 6px 20px;
+    color: #475e75;
+    flex: 1;
+}
+
+.searchMenu .search {
+    position: relative;
+    left: -50px;
+    color: #475e75;
+    width: 15px;
+}
+
+.welcome .leftColumn .welcomeInfo {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin-top: 24px;
+}
+
+.welcomeInfo .infoComponent {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 18px;
+    margin-right: 24px;
+}
+
+.infoComponent img {
+    width: 18px;
+    height: 18px;
+    padding-right: 5px;
+
+}
+
+.welcomeInfo .infoComponent p {
+    font-size: 18px;
+}
+
+.welcomeInfo .infoComponent span {
+    font-weight: bold;
+
+}
