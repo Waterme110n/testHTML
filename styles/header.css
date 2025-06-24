@@ -39,7 +39,7 @@ nav .community {
 nav .community span {
   font-size: 16px;
   color: #354A5F;
-  font-weight: bold;
+  font-weight: 700;
   font-family: "72 Brand Variable", sans-serif;
 }
 
@@ -54,14 +54,14 @@ nav .navigation {
   justify-content: space-around;
 }
 
-nav .navigation .ButtMore,
-nav .navigation .ButtNav {
+nav .navigation .button-more,
+nav .navigation .button-navigation {
   margin: 0 12px;
   position: relative;
 }
 
-.ButtProduct,
-.ButtNav {
+.button-product,
+.button-navigation {
   position: relative;
   border: none;
   background: none;
@@ -72,22 +72,22 @@ nav .navigation .ButtNav {
   padding: 24px 0;
 }
 
-.ButtNav a {
+.button-navigation a {
   color: #354A5F;
   cursor: pointer;
 }
 
-.ButtProduct:hover,
-.ButtNav a:hover {
+.button-product:hover,
+.button-navigation a:hover {
   color: #0070F2
 }
 
-.ButtProduct:active,
-.ButtNav a:active {
+.button-product:active,
+.button-navigation a:active {
   color: #354A5F;
 }
 
-.ButtProduct.pressed {
+.button-product.pressed {
   color: #0070F2;
   border-bottom: 2px solid #0070F2;
 }
@@ -110,7 +110,8 @@ nav .navigation .ButtNav {
   top: calc(5vh + 17px);
   left: -50px;
 }
-.dropdown-content-off{
+
+.dropdown-content-off {
   display: none;
 }
 
@@ -150,7 +151,7 @@ nav .navigation .ButtNav {
 }
 
 .dropdown-content ul .titleLi {
-  font-weight: bold;
+  font-weight: 700;
   padding: 8px 12px 12px 8px;
   color: black;
   font-family: "72 Brand Variable", sans-serif;
@@ -182,7 +183,7 @@ nav .navigation .rightLi {
   flex-direction: row;
   height: 100%;
   align-items: center;
-  
+
 }
 
 .actions h3 {
@@ -212,6 +213,6 @@ nav .navigation .rightLi {
   color: #354A5F;
 }
 
-.header-img{
+.header-img {
   height: 2.3vh;
 }

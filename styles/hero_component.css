@@ -1,4 +1,4 @@
-.welcome {
+.hero_component {
     display: flex;
     flex-direction: row;
     column-gap: 48px;
@@ -9,22 +9,22 @@
 
 }
 
-.welcome .leftColumn {
+.hero_component .leftColumn {
     display: flex;
     flex-direction: column;
     width: 40vw;
 }
 
-.welcome .leftColumn h2 {
+.hero_component .leftColumn h2 {
     color: white;
     font-family: "72 Brand Variable", sans-serif;
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 700;
     padding-bottom: 20px;
 
 }
 
-.welcome .leftColumn p {
+.hero_component .leftColumn p {
     color: white;
     font-family: "72 Brand Variable", sans-serif;
     font-size: 24px;
@@ -32,7 +32,7 @@
     padding-bottom: 16px;
 }
 
-.welcome .leftColumn .searchMenu {
+.hero_component .leftColumn .searchMenu {
     margin-top: 8px;
     display: flex;
     width: 100%;
@@ -65,7 +65,7 @@
     width: 15px;
 }
 
-.welcome .leftColumn .welcomeInfo {
+.hero_component .leftColumn .welcomeInfo {
     display: flex;
     flex-direction: row;
     width: 60%;
@@ -92,6 +92,6 @@
 }
 
 .welcomeInfo .infoComponent span {
-    font-weight: bold;
+    font-weight: 700;
 
 }
