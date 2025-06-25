@@ -15,20 +15,11 @@
   width: 40vw;
 }
 
-.hero-component .left-column h2 {
-  color: white;
-  font-family: "72 Brand Variable", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  padding-bottom: 20px;
-
-}
-
 .hero-component .left-column p {
   color: white;
   font-family: "72 Brand Variable", sans-serif;
   font-size: 24px;
-  font-weight: lighter;
+  font-weight: 200;
   padding-bottom: 16px;
 }
 

@@ -7,14 +7,6 @@
   row-gap: 30px;
 }
 
-.community-component h2 {
-  color: black;
-  font-size: 32px;
-  font-weight: 700;
-  font-family: "72 Brand Variable", sans-serif;
-  width: 100%;
-}
-
 .community-component article {
   display: flex;
   flex-direction: row;
