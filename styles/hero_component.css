@@ -1,97 +1,193 @@
 .hero_component {
-    display: flex;
-    flex-direction: row;
-    column-gap: 48px;
-    background-color: #0040b0;
-    margin-top: 40px;
-    padding: 58px 13vw;
-    height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #0040b0;
+  margin-top: 40px;
+  padding: 58px 13vw;
+  height: fit-content;
 
 }
 
-.hero_component .leftColumn {
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
+.hero_component .left-column {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
 }
 
-.hero_component .leftColumn h2 {
-    color: white;
-    font-family: "72 Brand Variable", sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    padding-bottom: 20px;
+.hero_component .left-column h2 {
+  color: white;
+  font-family: "72 Brand Variable", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 20px;
 
 }
 
-.hero_component .leftColumn p {
-    color: white;
-    font-family: "72 Brand Variable", sans-serif;
-    font-size: 24px;
-    font-weight: lighter;
-    padding-bottom: 16px;
+.hero_component .left-column p {
+  color: white;
+  font-family: "72 Brand Variable", sans-serif;
+  font-size: 24px;
+  font-weight: lighter;
+  padding-bottom: 16px;
 }
 
-.hero_component .leftColumn .searchMenu {
-    margin-top: 8px;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
+.hero_component .left-column .searchMenu {
+  position: relative;
+  margin-top: 8px;
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  border: 1px solid #585656;
+  border-radius: 100px 100px 100px 100px;
+  background-color: white;
 }
 
 .searchMenu select {
-    font-size: 16px;
-    width: 25%;
-    color: #475e75;
-    font-family: "72 Brand Variable", sans-serif;
-    border-radius: 100px 0px 0px 100px;
-    border: 1px solid #585656;
-    padding: 6px 0px 6px 16px;
+  font-size: 16px;
+  width: 26%;
+  color: #475e75;
+  font-family: "72 Brand Variable", sans-serif;
+  border-radius: 100px 0px 0px 100px;
+  padding: 6px 24px 6px 16px;
+  border: none;
 }
 
 .searchMenu input[type=text] {
-    border-radius: 0px 100px 100px 0;
-    border: 1px solid #585656;
-    border-left: none;
-    padding: 6px 60px 6px 20px;
-    color: #475e75;
-    flex: 1;
+  border-radius: 0px 100px 100px 0;
+  border: 1px solid #585656;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  padding: 6px 60px 6px 20px;
+  color: #475e75;
+  flex: 1;
+
 }
 
 .searchMenu .search {
-    position: relative;
-    left: -50px;
-    color: #475e75;
-    width: 15px;
+  position: absolute;
+  right: 10px;
+  color: #475e75;
+  width: 15px;
 }
 
-.hero_component .leftColumn .welcomeInfo {
-    display: flex;
-    flex-direction: row;
-    width: 60%;
-    margin-top: 24px;
+.hero_component .left-column .welcomeInfo {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  margin-top: 24px;
 }
 
 .welcomeInfo .infoComponent {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    font-size: 18px;
-    margin-right: 24px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 18px;
+  margin-right: 24px;
 }
 
 .infoComponent img {
-    width: 18px;
-    height: 18px;
-    padding-right: 5px;
+  width: 18px;
+  height: 18px;
+  padding-right: 5px;
 
 }
 
 .welcomeInfo .infoComponent p {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .welcomeInfo .infoComponent span {
-    font-weight: 700;
+  font-weight: 700;
 
+}
+
+.hero_component .right-column {
+  display: flex;
+  flex-direction: column;
+  width: auto
+}
+
+.right-column .slider-text {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #ebf8ff;
+  width: 30vw;
+  height: 40%;
+  padding: 24px;
+}
+
+.slider-text h3 {
+  font-family: "72 Brand Variable", sans-serif;
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.slider-text p {
+  color: #223548;
+  font-family: "72 Brand Variable", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.slider-text a {
+  text-decoration: underline;
+  color: #0057d2;
+}
+
+.slider-text a:hover {
+  color: #003d92;
+}
+
+.slider-text a:active {
+  color: #001533;
+}
+
+.slider-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.slider-navigation .left-arrow,
+.slider-navigation .right-arrow {
+  border: none;
+  background-color: transparent;
+  background-image: url(/testHTML/assets/arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1vw;
+  opacity: 1;
+  transition: opacity 0.5s ;
+}
+
+.slider-navigation .left-arrow:hover,
+.slider-navigation .right-arrow:hover{
+  opacity: 0.7;
+  transition: opacity 0.5s ;
+}
+
+.slider-navigation .right-arrow {
+  transform: rotate(180deg);
+}
+
+.slider-navigation .slider-point {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+
+.slider-point button{
+  border: none;
+  background: none;
+  color: #8396A8;
+}
+
+.slider-point button:hover{
+  transform: scale(2);
 }
