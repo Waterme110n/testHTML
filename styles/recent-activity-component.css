@@ -4,9 +4,6 @@
   padding: 40px 13vw 0px 13vw;
 }
 
-aside {
-  flex: 3;
-}
 
 .recent-activity-component {
   flex: 7;
@@ -89,7 +86,7 @@ aside {
   color: inherit;
 }
 
-.recent-activity-component .recent-activity-card{
+.recent-activity-component .recent-activity-card {
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -99,11 +96,12 @@ aside {
   margin-bottom: 24px;
   border-radius: 10px;
 }
-.display-none{
+
+.display-none {
   display: none;
 }
 
-.recent-activity-component .recent-activity-card .header-panel-card{
+.recent-activity-component .recent-activity-card .header-panel-card {
   display: flex;
   flex-direction: row;
   height: 50px;
@@ -112,19 +110,19 @@ aside {
   padding-bottom: 16px;
 }
 
-.header-panel-card .ava{
+.header-panel-card .ava {
   border-radius: 100%;
   height: inherit;
 }
 
-.header-panel-card .name-job{
+.header-panel-card .name-job {
   display: flex;
   flex-direction: column;
   padding: 0 20px;
   justify-content: space-around;
 }
 
-.name-job .name{
+.name-job h5 {
   color: #12171c;
   font-family: "72 Brand Variable", sans-serif;
   font-size: 16px;
@@ -134,7 +132,7 @@ aside {
 
 }
 
-.name-job .job{
+.name-job .job {
   font-family: "72 Brand Variable", sans-serif;
   font-size: 14px;
   font-weight: 200;
@@ -143,7 +141,7 @@ aside {
   opacity: 50%;
 }
 
-.header-panel-card .ratings{
+.header-panel-card .ratings {
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -151,14 +149,14 @@ aside {
   align-items: center;
 }
 
-.ratings img{
+.ratings img {
   width: 20px;
   height: fit-content;
   opacity: 70%;
   padding-left: 20px;
 }
 
-.ratings p{
+.ratings p {
   font-family: "72 Brand Variable", sans-serif;
   font-size: 14px;
   font-weight: 200;
@@ -168,7 +166,7 @@ aside {
   padding-left: 8px;
 }
 
-.recent-activity-component .recent-activity-card h4{
+.recent-activity-component .recent-activity-card h4 {
   color: black;
   opacity: 70%;
   font-size: 20px;
@@ -179,7 +177,7 @@ aside {
   word-wrap: break-word;
 }
 
-.recent-activity-component .recent-activity-card .comment{
+.recent-activity-component .recent-activity-card .comment {
   color: #223548;
   font-family: "72 Brand Variable", sans-serif;
   font-size: 16px;
@@ -188,7 +186,7 @@ aside {
   padding-bottom: 20px;
 }
 
-.recent-activity-component .recent-activity-card .footer-panel-card{
+.recent-activity-component .recent-activity-card .footer-panel-card {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -205,42 +203,52 @@ aside {
   text-align: center;
   align-items: center;
 }
-.footer-panel-card .time{
+
+.footer-panel-card .time {
   padding-right: 16px;
   padding-left: 0px;
   border-right: 1px solid #2f4861;
 }
 
-.footer-panel-card a{
+.footer-panel-card a {
   cursor: pointer;
   color: #0040b0;
+  align-items: center;
 }
-.footer-panel-card img{
-  cursor: pointer;
+
+.footer-panel-card a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-panel-card img {
   padding: 0 5px;
   height: 8px;
   position: relative;
   opacity: 60%;
+
 }
-.recent-activity-component .recent-activity-card .images-card{
+
+.recent-activity-component .recent-activity-card .images-card {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   padding-bottom: 20px;
 }
 
-.images-card img{
-  width:200px ;
+.images-card img {
+  width: 200px;
 }
 
-.recent-activity-component .recent-activity-footer{
+.recent-activity-component .recent-activity-footer {
   display: flex;
   flex-direction: row;
   justify-content: right;
   width: 100%;
   align-items: center;
 }
-.recent-activity-footer button{
+
+.recent-activity-footer button {
   border: 1px solid #0057d2;
   border-radius: 10px;
   background-color: #0057d2;
@@ -253,10 +261,7 @@ aside {
   transition: all 0.5s;
   cursor: pointer;
 }
-.recent-activity-footer #prev{
+
+.recent-activity-footer #prev {
   margin-right: 10px;
 }
-
-
-
-

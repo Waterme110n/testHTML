@@ -1,0 +1,146 @@
+aside {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  padding-left: 48px;
+}
+
+aside .top-aside,
+aside .bottom-aside {
+  display: flex;
+  flex-direction: column;
+}
+
+aside .bottom-aside {
+  margin-top: 40px;
+}
+
+.top-aside h4,
+.bottom-aside h4 {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "72 Brand Variable", sans-serif;
+  padding-bottom: 8px;
+  width: 100%;
+  height: 60%;
+}
+
+.top-aside .header-text {
+  color: #223548;
+  font-family: "72 Brand Variable", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 200;
+  padding-bottom: 30px;
+}
+
+.top-aside .top-aside-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding-bottom: 20px;
+  align-self: start;
+}
+
+.top-aside-tag img {
+  width: 48px;
+  height: 48px;
+  padding-right: 24px;
+}
+
+.top-aside-tag .tag-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.tag-text h5 {
+  color: #12171c;
+  font-family: "72 Brand Variable", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  width: fit-content;
+  white-space: nowrap;
+  opacity: 0.7;
+}
+
+.tag-text p {
+  font-family: "72 Brand Variable", sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 1.5;
+  color: #223548;
+}
+
+.bottom-aside .bottom-aside-authors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.bottom-aside-authors .authors-left,
+.bottom-aside-authors .authors-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 48px;
+}
+
+.authors-left .ava {
+  width: 48px;
+  border-radius: 100%;
+}
+
+.authors-left a {
+  display: flex;
+  flex-direction: row;
+  color: #12171c;
+  font-family: "72 Brand Variable", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  opacity: 80%;
+  padding-left: 12px;
+}
+
+.authors-left a img {
+  width: 28px;
+}
+
+.authors-right img {
+  width: 16px;
+  padding: 0 4px;
+}
+
+.authors-right p {
+  font-family: "72 Brand Variable", sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  height: fit-content;
+  white-space: nowrap;
+  opacity: 70%;
+}
+
+
+.bottom-aside .view-all {
+  font-family: "72 Brand Variable", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+  cursor: pointer;
+  color: #0040b0;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.bottom-aside .view-all:hover {
+  text-decoration: underline;
+}
+
+.view-all img {
+  padding: 0 5px;
+  height: 8px;
+  opacity: 60%;
+}
