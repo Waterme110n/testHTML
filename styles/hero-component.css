@@ -1,4 +1,4 @@
-.hero_component {
+.hero-component {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -9,13 +9,13 @@
 
 }
 
-.hero_component .left-column {
+.hero-component .left-column {
   display: flex;
   flex-direction: column;
   width: 40vw;
 }
 
-.hero_component .left-column h2 {
+.hero-component .left-column h2 {
   color: white;
   font-family: "72 Brand Variable", sans-serif;
   font-size: 40px;
@@ -24,7 +24,7 @@
 
 }
 
-.hero_component .left-column p {
+.hero-component .left-column p {
   color: white;
   font-family: "72 Brand Variable", sans-serif;
   font-size: 24px;
@@ -32,7 +32,7 @@
   padding-bottom: 16px;
 }
 
-.hero_component .left-column .searchMenu {
+.hero-component .left-column .searchMenu {
   position: relative;
   margin-top: 8px;
   display: flex;
@@ -72,7 +72,7 @@
   width: 15px;
 }
 
-.hero_component .left-column .welcomeInfo {
+.hero-component .left-column .welcomeInfo {
   display: flex;
   flex-direction: row;
   width: 60%;
@@ -103,7 +103,7 @@
 
 }
 
-.hero_component .right-column {
+.hero-component .right-column {
   display: flex;
   flex-direction: column;
   width: auto
@@ -163,13 +163,13 @@
   background-size: contain;
   width: 1vw;
   opacity: 1;
-  transition: opacity 0.5s ;
+  transition: opacity 0.5s;
 }
 
 .slider-navigation .left-arrow:hover,
-.slider-navigation .right-arrow:hover{
+.slider-navigation .right-arrow:hover {
   opacity: 0.7;
-  transition: opacity 0.5s ;
+  transition: opacity 0.5s;
 }
 
 .slider-navigation .right-arrow {
@@ -182,12 +182,12 @@
   column-gap: 10px;
 }
 
-.slider-point button{
+.slider-point button {
   border: none;
   background: none;
   color: #8396A8;
 }
 
-.slider-point button:hover{
+.slider-point button:hover {
   transform: scale(2);
 }
