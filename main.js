@@ -87,3 +87,22 @@ viewAll.addEventListener('click', () => {
   }
   showPage2(currentPage2);  
 });
+
+/*back to top*/
+
+const backToTopButton = document.querySelector('.back-to-top');
+backToTopButton.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+window.addEventListener('scroll', function() {
+    let scrolled = window.scrollY || window.pageYOffset;
+    if (scrolled > 350) {
+        backToTopButton.classList.add('active');
+    } else {
+        backToTopButton.classList.remove('active');
+    }
+});

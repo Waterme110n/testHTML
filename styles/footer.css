@@ -61,3 +61,20 @@ footer .right-footer {
   vertical-align: middle;
   
 }
+
+.back-to-top {
+    background: white;
+    box-shadow: 0 0 2px rgba(91, 115, 139, 0.2), 0 8px 10px rgba(91, 115, 139, 0.2);
+    border-radius: 50%;
+    position: fixed;
+    bottom: -50px;
+    padding: 10px 12px;
+    right: 50px;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+}
+
+.back-to-top.active {
+    bottom: 50px;
+    transition: 0.3s all;
+}
