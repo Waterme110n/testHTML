@@ -106,3 +106,26 @@ window.addEventListener('scroll', function() {
         backToTopButton.classList.remove('active');
     }
 });
+
+/*burger*/
+
+const nav = document.querySelector('.navigation');
+const actions = document.querySelector('.actions');
+
+function burgerMenu(){
+  if (nav.classList.contains('navigation')) {
+    nav.classList.remove('navigation');
+    nav.classList.add('navigation-open');
+    actions.classList.remove('actions');
+    actions.classList.add('actions-open');
+    document.body.classList.add('no-scroll')
+
+
+  } else {
+    nav.classList.add('navigation');
+    nav.classList.remove('navigation-open');
+    actions.classList.add('actions');
+    actions.classList.remove('actions-open');
+    document.body.classList.remove('no-scroll')
+  }
+}
