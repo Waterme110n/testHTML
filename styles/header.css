@@ -3,10 +3,6 @@
   padding: 0;
   text-decoration: none;
 }
-/*убрать*/
-body{
-  height: 300vh;
-}
 
 header {
   display: flex;

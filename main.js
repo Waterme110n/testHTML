@@ -28,7 +28,6 @@ buttons.forEach(function (button) {
 const articles = document.querySelectorAll('.recent-activity-card');
 let currentPage = 0;
 const articlesPerPage = 3;
-const totalPages = Math.ceil(articles.length / articlesPerPage);
 
 showPage(currentPage);
 
@@ -56,4 +55,35 @@ document.getElementById('next').addEventListener('click', () => {
     currentPage++;
     showPage(currentPage);
   }
+});
+
+/*view more*/
+const articles2 = document.querySelectorAll('.featured-topics-card');
+let currentPage2 = 0;
+let articlesPerPage3 = 3;
+
+showPage2(currentPage2);
+
+function showPage2(page) {
+  articles2.forEach((article, index) => {
+    if (index >= page * articlesPerPage3 && index < (page + 1) * articlesPerPage3) {
+      article.classList.add('featured-topics-card');
+      article.classList.remove('display-none');
+    } else {
+      article.classList.remove('featured-topics-card');
+      article.classList.add('display-none');
+    }
+  });
+}
+
+let viewAll = document.getElementById('view-all')
+viewAll.addEventListener('click', () => {
+  if( viewAll.textContent == "+ View all"){
+    viewAll.textContent = "Close"
+    articlesPerPage3 = 6;
+  } else{
+    viewAll.textContent = "+ View all"
+    articlesPerPage3 = 3;
+  }
+  showPage2(currentPage2);  
 });
