@@ -163,7 +163,7 @@
   transition: opacity 0.5s;
 }
 
-.slider-navigation .right-arrow {
+.slider-navigation .left-arrow {
   transform: rotate(180deg);
 }
 

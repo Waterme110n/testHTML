@@ -26,6 +26,10 @@ header {
   overflow: hidden;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 h1 {
   color: white;
   font-family: "72 Brand Variable", sans-serif;
@@ -143,7 +147,7 @@ nav .navigation-open {
   right: 0;
   background-color: white;
   box-shadow: -8px 0px 10px rgba(91, 115, 139, 0.2);
-  height: 100vh;
+  height: calc(95vh - 48px);
   width: 300px;
   padding: 24px;
   z-index: 1;
@@ -152,7 +156,8 @@ nav .navigation-open {
 
 @media (min-width: 767px) {
   nav .navigation-open {
-    top: calc(16px + 5vh);  
+    top: calc(16px + 5vh);
+    height: calc(90vh - 14px);
   }
 }
 
@@ -174,9 +179,9 @@ nav .search-input {
   margin-bottom: 16px;
 }
 
-nav .search-input menu{
+nav .search-input menu {
   display: flex;
-  flex-direction:row ;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -205,15 +210,41 @@ nav .navigation .button-navigation {
 }
 
 
-nav .navigation .button-right {
+nav .navigation-open .button-right {
   position: absolute;
+  bottom: 0;
+  width: 348px;
+  box-sizing: border-box;
   right: 0;
 }
 
+@media (min-width: 1330px) {
+  nav .navigation .button-right {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.button-right .button-product {
+  border: none;
+  background-color: #0070F2;
+  filter: grayscale(0%);
+  color: white;
+  padding: 24px;
+  background-image: url(/testHTML/assets/arrow.png);
+}
+
+@media (min-width: 1330px) {
+  .button-right .button-product {
+    border: none;
+    background: none;
+    color: #354A5F;
+    padding: 24px;
+  }
+}
 
 .button-navigation {
   position: relative;
-  border: none;
   background: none;
   color: #354A5F;
   font-family: "72 Brand Variable", sans-serif;
@@ -225,10 +256,10 @@ nav .navigation .button-right {
   text-align: left;
 }
 
-.button-product{
+.button-product {
   position: relative;
-  border: none;
   background: none;
+  border: none;
   color: #354A5F;
   font-family: "72 Brand Variable", sans-serif;
   font-size: 14px;
@@ -245,16 +276,17 @@ nav .navigation .button-right {
   filter: grayscale(100%);
 }
 
-.button-product:hover{
+.button-product:hover {
   filter: grayscale(0%);
 }
 
 @media (min-width: 1330px) {
+
   .button-product,
   .button-navigation {
     width: auto;
-    padding: 24px 0; 
-    border-bottom: none; 
+    padding: 24px 0;
+    border-bottom: none;
     text-align: center;
     background-image: none;
     filter: grayscale(0%);
@@ -272,9 +304,22 @@ nav .navigation .button-right {
 
 @media (min-width: 1330px) {
   .button-navigation a {
-  display: inline;
+    display: inline;
+  }
 }
+
+.button-right .button-product:hover {
+  color: white;
+  background-color: #004797;
 }
+
+@media (min-width: 1330px) {
+  .button-right .button-product:hover {
+    color: #0070F2;
+    background: none;
+  }
+}
+
 
 .button-product:hover,
 .button-navigation a:hover {
@@ -323,9 +368,18 @@ nav .navigation .button-right {
 }
 
 .all-screen {
-  width: 80vw;
-  margin: 0 10vw;
+    width: 90vw;
+    margin: 0px 5vw;
+    left: -73.5vw;
+    padding-left: 0;
+    padding-right: 0;
 
+}
+
+.dropdown-content h3 {
+  width: 100%;
+  font-size: 32px;
+  font-family: "72 Brand Variable", sans-serif;
 }
 
 .dropdown-content ul {
@@ -377,12 +431,25 @@ nav .navigation .rightLi {
 }
 
 
-.actions {
+.actions, .search {
   display: none;
 }
 
 .actions-open {
   display: flex;
+  position: relative;
+}
+
+.profile {
+  position: absolute;
+  top: -10px;
+  left: -10vw;
+  cursor: pointer;
+  color: #354A5F;
+  border: none;
+  background: none;
+  height: 20px;
+  width: 20px;
 }
 
 @media (min-width: 1330px) {
@@ -394,24 +461,23 @@ nav .navigation .rightLi {
     align-items: center;
     justify-content: end;
   }
+
+  .search,
+  .profile {
+    display: block;
+    position: inherit;
+    cursor: pointer;
+    color: #354A5F;
+    margin-left: 20px;
+    border: none;
+    background: none;
+    height: 100%;
+    width: 20px;
+  }
 }
 
-.actions h3 {
-  width: 100%;
-  font-size: 32px;
-  font-family: "72 Brand Variable", sans-serif;
-}
 
-.search,
-.actions .profile {
-  cursor: pointer;
-  color: #354A5F;
-  margin-left: 20px;
-  border: none;
-  background: none;
-  height: 100%;
-  width: 20px;
-}
+
 
 .actions .search:hover,
 .actions .profile:hover {
