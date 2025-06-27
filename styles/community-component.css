@@ -14,13 +14,6 @@
 }
 
 
-@media (min-width: 1330px) {
-  .hero-component {
-    flex-direction: row;
-  }
-}
-
-
 .community-component article {
   display: flex;
   flex-direction: row;
