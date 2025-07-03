@@ -1,243 +1,775 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <script src="main.js"></script>
-        <title>test</title>
-    </head>
-    <body>
-        <header>
-            <div class="landing">
-                <a class="logo" href="https://www.sap.com/index.html"></a>
-                <a class="community" href="https://community.sap.com/"><span>Community</span></a>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/hero-component.css">
+  <link rel="stylesheet" href="styles/community-component.css">
+  <link rel="stylesheet" href="styles/recent-activity-component.css">
+  <link rel="stylesheet" href="styles/asside.css">
+  <link rel="stylesheet" href="styles/featured-topics.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <title>test</title>
+</head>
+
+<body>
+  <header>
+    <div class="landing">
+      <a class="logo" href="https://www.sap.com/index.html"></a>
+      <a class="community" href="https://community.sap.com/"><span>Community</span></a>
+    </div>
+    <nav>
+      <button id="burger-button" class="burger" onclick="burgerMenu()"></button>
+      <ul class="navigation">
+        <li class="search-input">
+          <menu>
+            <input type="text" placeholder="Search the SAP Community">
+            <button class="search" id="search" type="submit">
+              <svg viewBox="0 0 18 17" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.1914 15.3281C17.3555 15.4922 17.4375 15.7031 17.4375 15.9609C17.4375 16.2188 17.3438 16.4414 17.1562 16.6289C16.9922 16.793 16.7812 16.875 16.5234 16.875C16.2656 16.875 16.0547 16.793 15.8906 16.6289L12.375 13.1133C11.7656 13.582 11.0742 13.957 10.3008 14.2383C9.55078 14.4961 8.74219 14.625 7.875 14.625C6.84375 14.625 5.88281 14.4375 4.99219 14.0625C4.10156 13.6875 3.32812 13.1719 2.67188 12.5156C2.01562 11.8594 1.5 11.0859 1.125 10.1953C0.75 9.30469 0.5625 8.34375 0.5625 7.3125C0.5625 6.28125 0.75 5.32031 1.125 4.42969C1.5 3.53906 2.01562 2.76562 2.67188 2.10938C3.32812 1.45312 4.10156 0.9375 4.99219 0.5625C5.88281 0.1875 6.84375 0 7.875 0C8.90625 0 9.86719 0.1875 10.7578 0.5625C11.6484 0.9375 12.4219 1.45312 13.0781 2.10938C13.7344 2.76562 14.25 3.53906 14.625 4.42969C15 5.32031 15.1875 6.28125 15.1875 7.3125C15.1875 8.17969 15.0469 9 14.7656 9.77344C14.5078 10.5234 14.1445 11.2031 13.6758 11.8125L17.1914 15.3281ZM7.875 12.832C8.64844 12.832 9.36328 12.6914 10.0195 12.4102C10.6992 12.1289 11.2852 11.7422 11.7773 11.25C12.293 10.7344 12.6914 10.1484 12.9727 9.49219C13.2539 8.8125 13.3945 8.08594 13.3945 7.3125C13.3945 6.53906 13.2539 5.82422 12.9727 5.16797C12.6914 4.48828 12.293 3.90234 11.7773 3.41016C11.2852 2.89453 10.6992 2.49609 10.0195 2.21484C9.36328 1.93359 8.64844 1.79297 7.875 1.79297C7.10156 1.79297 6.375 1.93359 5.69531 2.21484C5.03906 2.49609 4.45312 2.89453 3.9375 3.41016C3.44531 3.90234 3.05859 4.48828 2.77734 5.16797C2.49609 5.82422 2.35547 6.53906 2.35547 7.3125C2.35547 8.08594 2.49609 8.8125 2.77734 9.49219C3.05859 10.1484 3.44531 10.7344 3.9375 11.25C4.45312 11.7422 5.03906 12.1289 5.69531 12.4102C6.375 12.6914 7.10156 12.832 7.875 12.832Z">
+                </path>
+              </svg>
+            </button>
+          </menu>
+        </li>
+        <li class="button-more">
+          <button class="button-product" id="button-product" onclick="toggleDropdown(this)">Products and
+            Technology</button>
+          <div class="dropdown-content-off two-columns" id="dropdown-content">
+            <ul>
+              <li class="titleLi">By Category</li>
+              <hr>
+              <li><a href="#">CRM and Customer Experience</a></li>
+              <li><a href="#">Enterprise Resource Planning</a></li>
+              <li><a href="#">Financial Management</a></li>
+              <li><a href="#">Human Capital Management</a></li>
+              <li><a href="#">Product Lifecycle Management</a></li>
+              <li><a href="#">Spend Management</a></li>
+              <li><a href="#">Supply Chain Management</a></li>
+              <li><a href="#">Technology</a></li>
+            </ul>
+            <ul>
+              <li class="titleLi">Related Content</li>
+              <hr>
+              <li><a href="#">All Blogs</a></li>
+              <li><a href="#">Questions about SAP Websites</a></li>
+              <li><a href="#">Blogs about SAP Websites</a></li>
+              <li><a href="#">All SAP Managed Tags</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="button-more">
+          <button class="button-product" id="button-product" onclick="toggleDropdown(this)">Groups</button>
+          <div class="dropdown-content-off three-columns" id="dropdown-content">
+            <ul>
+              <li class="titleLi">Activity Groups</li>
+              <hr>
+              <li><a href="#">Devtoberfest</a></li>
+              <li><a href="#">SAP CodeJam</a></li>
+              <li><a href="#">SAP TechEd</a></li>
+            </ul>
+            <ul>
+              <li class="titleLi">Industry Groups</li>
+              <hr>
+              <li><a href="#">Automotive</a></li>
+              <li><a href="#">Banking</a></li>
+              <li><a href="#">Oil, Gas, and Energy</a></li>
+              <li><a href="#">Retail</a></li>
+              <li><a href="#">Utilities</a></li>
+              <li><a href="#">View all Industry Groups</a></li>
+
+            </ul>
+            <ul>
+              <li class="titleLi">Influence and Feedback Groups</li>
+              <hr>
+              <li><a href="#">SAP Community Event Organizers</a></li>
+              <li><a href="#">SAP Community Leaders and Advocates</a></li>
+              <li><a href="#">SAP Industry Analysts</a></li>
+              <li><a href="#">Meet our SAP Community Leaders</a></li>
+            </ul>
+            <ul>
+              <li class="titleLi">Interest Groups</li>
+              <hr>
+              <li><a href="#">Application Development and Automation</a></li>
+              <li><a href="#">Artificial Intelligence and Machine Learning</a></li>
+              <li><a href="#">Community Coffee Corner</a></li>
+              <li><a href="#">Enterprise Architecture</a></li>
+              <li><a href="#">Integration</a></li>
+              <li><a href="#">SAP Learning Groups</a></li>
+              <li><a href="#">SAP Women in Tech</a></li>
+              <li><a href="#">Welcome Corner</a></li>
+              <li><a href="#">All Interest Groups</a></li>
+            </ul>
+            <ul>
+              <li class="titleLi">Location Groups</li>
+              <hr>
+              <li><a href="#">Americas</a></li>
+              <li><a href="#">Asia Pacific</a></li>
+              <li><a href="#">Europe</a></li>
+              <li><a href="#">Middle East and Africa</a></li>
+            </ul>
+            <ul>
+              <li class="titleLi">SAP SuccessFactors</li>
+              <hr>
+              <li><a href="#">SAP SuccessFactors</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="button-navigation"><a href="https://pages.community.sap.com/resources/partners">Partners</a></li>
+        <li class="button-navigation"><a href="https://pages.community.sap.com/topics">Topics</a></li>
+        <li class="button-more">
+          <button class="button-product" id="button-product" onclick="toggleDropdown(this)">Events</button>
+          <div class="dropdown-content-off" id="dropdown-content">
+            <ul>
+              <li><a href="#">Become an Event Organizer</a></li>
+              <li><a href="#">Application Lifecycle Management</a></li>
+              <li><a href="#">Devtoberfest</a></li>
+              <li><a href="#">Industries</a></li>
+              <li><a href="#">SAP CodeJam</a></li>
+              <li><a href="#">SAP Community</a></li>
+              <li><a href="#">SAP SuccessFactors</a></li>
+              <li><a href="#">User Groups</a></li>
+              <li><a href="#">View all Events</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="button-navigation"><a href="https://community.sap.com/t5/what-s-new/bg-p/whats-new">What's New</a>
+        </li>
+        <li class="button-more">
+          <button class="button-product" id="button-product" onclick="toggleDropdown(this)">Get Started</button>
+          <div class="dropdown-content-off" id="dropdown-content">
+            <ul>
+              <li><a href="#">Welcome Corner</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Help Resources</a></li>
+              <li><a href="#">Legal Resources</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="button-right">
+          <button class="button-product" id="button-product" onclick="toggleDropdown(this)">Explore SAP</button>
+          <div class="dropdown-content-off all-screen" id="dropdown-content">
+            <h3>Explore all areas of SAP</h3>
+            <ul>
+              <li class="titleLi"><a href="#">Products <span>></span></a></li>
+              <hr>
+              <li><a href="#">SAP Business Suite</a></li>
+              <li><a href="#">Artificial intelligence</a></li>
+              <li><a href="#">Data and analytics</a></li>
+              <li><a href="#">Cloud ERP applications</a></li>
+              <li><a href="#">Technology platform</a></li>
+              <li><a href="#">Financial management</a></li>
+              <li><a href="#">Spend management</a></li>
+              <li><a href="#">Supply chain management</a></li>
+              <li><a href="#">Human capital management</a></li>
+              <li><a href="#">Customer experience</a></li>
+              <li><a href="#">SAP Business Network</a></li>
+              <hr style="width: 30%; margin: 6px 0;">
+              <li><a href="#">View products A–Z</a></li>
+              <li><a href="#">View industries</a></li>
+              <li><a href="#">Try SAP</a></li>
+              <hr style="width: 30%; margin: 6px 0;">
+              <li><a href="#">Partners</a></li>
+              <hr style="width: 30%; margin: 6px 0;">
+              <li><a href="#">Services</a></li>
+            </ul>
+            <ul>
+              <li class="titleLi">Learning and support</li>
+              <hr>
+              <li><a href="#">Learning and certification</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+            <ul>
+              <li class="titleLi">About</li>
+              <hr>
+              <li><a href="#">Company information</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Customer stories</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Investor relations</a></li>
+              <li><a href="#">News center</a></li>
+              <li><a href="#">SAP Trust Center</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="actions">
+      <button class="search" id="search">
+        <svg width="100%" height="100%" viewBox="0 0 18 17" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M17.1914 15.3281C17.3555 15.4922 17.4375 15.7031 17.4375 15.9609C17.4375 16.2188 17.3438 16.4414 17.1562 16.6289C16.9922 16.793 16.7812 16.875 16.5234 16.875C16.2656 16.875 16.0547 16.793 15.8906 16.6289L12.375 13.1133C11.7656 13.582 11.0742 13.957 10.3008 14.2383C9.55078 14.4961 8.74219 14.625 7.875 14.625C6.84375 14.625 5.88281 14.4375 4.99219 14.0625C4.10156 13.6875 3.32812 13.1719 2.67188 12.5156C2.01562 11.8594 1.5 11.0859 1.125 10.1953C0.75 9.30469 0.5625 8.34375 0.5625 7.3125C0.5625 6.28125 0.75 5.32031 1.125 4.42969C1.5 3.53906 2.01562 2.76562 2.67188 2.10938C3.32812 1.45312 4.10156 0.9375 4.99219 0.5625C5.88281 0.1875 6.84375 0 7.875 0C8.90625 0 9.86719 0.1875 10.7578 0.5625C11.6484 0.9375 12.4219 1.45312 13.0781 2.10938C13.7344 2.76562 14.25 3.53906 14.625 4.42969C15 5.32031 15.1875 6.28125 15.1875 7.3125C15.1875 8.17969 15.0469 9 14.7656 9.77344C14.5078 10.5234 14.1445 11.2031 13.6758 11.8125L17.1914 15.3281ZM7.875 12.832C8.64844 12.832 9.36328 12.6914 10.0195 12.4102C10.6992 12.1289 11.2852 11.7422 11.7773 11.25C12.293 10.7344 12.6914 10.1484 12.9727 9.49219C13.2539 8.8125 13.3945 8.08594 13.3945 7.3125C13.3945 6.53906 13.2539 5.82422 12.9727 5.16797C12.6914 4.48828 12.293 3.90234 11.7773 3.41016C11.2852 2.89453 10.6992 2.49609 10.0195 2.21484C9.36328 1.93359 8.64844 1.79297 7.875 1.79297C7.10156 1.79297 6.375 1.93359 5.69531 2.21484C5.03906 2.49609 4.45312 2.89453 3.9375 3.41016C3.44531 3.90234 3.05859 4.48828 2.77734 5.16797C2.49609 5.82422 2.35547 6.53906 2.35547 7.3125C2.35547 8.08594 2.49609 8.8125 2.77734 9.49219C3.05859 10.1484 3.44531 10.7344 3.9375 11.25C4.45312 11.7422 5.03906 12.1289 5.69531 12.4102C6.375 12.6914 7.10156 12.832 7.875 12.832Z">
+          </path>
+        </svg>
+      </button>
+      <button class="profile">
+        <svg width="100%" height="100%" viewBox="0 0 18 18" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12.5684 8.50769C13.8809 8.99988 14.9355 9.83191 15.7324 11.0038C16.5527 12.1522 16.9629 13.4764 16.9629 14.9764V16.9803C16.9629 17.285 16.8691 17.5311 16.6816 17.7186C16.5176 17.9061 16.2832 17.9999 15.9785 17.9999H1.98633C1.68164 17.9999 1.43555 17.9061 1.24805 17.7186C1.08398 17.5311 1.00195 17.285 1.00195 16.9803V14.9764C1.00195 13.4764 1.40039 12.1522 2.19727 11.0038C3.01758 9.83191 4.08398 8.99988 5.39648 8.50769C4.45898 7.57019 3.99023 6.41003 3.99023 5.02722C3.99023 4.3241 4.11914 3.66785 4.37695 3.05847C4.63477 2.4491 4.98633 1.92175 5.43164 1.47644C5.90039 1.03113 6.42773 0.679565 7.01367 0.421753C7.62305 0.16394 8.2793 0.0350342 8.98242 0.0350342C9.68555 0.0350342 10.3418 0.16394 10.9512 0.421753C11.5605 0.679565 12.0879 1.03113 12.5332 1.47644C12.9785 1.92175 13.3301 2.4491 13.5879 3.05847C13.8457 3.66785 13.9746 4.3241 13.9746 5.02722C13.9746 6.41003 13.5059 7.57019 12.5684 8.50769ZM8.98242 2.00378C8.13867 2.00378 7.42383 2.29675 6.83789 2.88269C6.27539 3.44519 5.99414 4.16003 5.99414 5.02722C5.99414 5.87097 6.27539 6.58582 6.83789 7.17175C7.42383 7.73425 8.13867 8.0155 8.98242 8.0155C9.82617 8.0155 10.5293 7.73425 11.0918 7.17175C11.6777 6.58582 11.9707 5.87097 11.9707 5.02722C11.9707 4.16003 11.6777 3.44519 11.0918 2.88269C10.5293 2.29675 9.82617 2.00378 8.98242 2.00378ZM14.959 14.9764C14.959 14.2733 14.8301 13.6288 14.5723 13.0428C14.3145 12.4335 13.9629 11.9061 13.5176 11.4608C13.0723 10.9921 12.5449 10.6288 11.9355 10.371C11.3496 10.1132 10.7051 9.98425 10.002 9.98425H7.99805C7.29492 9.98425 6.63867 10.1132 6.0293 10.371C5.41992 10.6288 4.89258 10.9921 4.44727 11.4608C4.00195 11.9061 3.65039 12.4335 3.39258 13.0428C3.13477 13.6288 3.00586 14.2733 3.00586 14.9764V15.996H14.959V14.9764Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <main>
+    <section class="hero-component">
+      <div class="left-column">
+        <h1>Welcome to SAP Community</h1>
+        <p>Connect and engage with our community to get answers, discuss best practices, and continually learn more
+          about
+          SAP solutions.</p>
+        <form class="searchMenu">
+          <select name="searchs">
+            <option value="All community" selected>All community</option>
+            <option value="Knowledge base">Knowledge base</option>
+            <option value="Users">Users</option>
+            <option value="Managed tags">Managed tags</option>
+          </select>
+          <input type="text" placeholder="Search">
+          <button class="search" id="search" type="submit">
+            <svg viewBox="0 0 18 17" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.1914 15.3281C17.3555 15.4922 17.4375 15.7031 17.4375 15.9609C17.4375 16.2188 17.3438 16.4414 17.1562 16.6289C16.9922 16.793 16.7812 16.875 16.5234 16.875C16.2656 16.875 16.0547 16.793 15.8906 16.6289L12.375 13.1133C11.7656 13.582 11.0742 13.957 10.3008 14.2383C9.55078 14.4961 8.74219 14.625 7.875 14.625C6.84375 14.625 5.88281 14.4375 4.99219 14.0625C4.10156 13.6875 3.32812 13.1719 2.67188 12.5156C2.01562 11.8594 1.5 11.0859 1.125 10.1953C0.75 9.30469 0.5625 8.34375 0.5625 7.3125C0.5625 6.28125 0.75 5.32031 1.125 4.42969C1.5 3.53906 2.01562 2.76562 2.67188 2.10938C3.32812 1.45312 4.10156 0.9375 4.99219 0.5625C5.88281 0.1875 6.84375 0 7.875 0C8.90625 0 9.86719 0.1875 10.7578 0.5625C11.6484 0.9375 12.4219 1.45312 13.0781 2.10938C13.7344 2.76562 14.25 3.53906 14.625 4.42969C15 5.32031 15.1875 6.28125 15.1875 7.3125C15.1875 8.17969 15.0469 9 14.7656 9.77344C14.5078 10.5234 14.1445 11.2031 13.6758 11.8125L17.1914 15.3281ZM7.875 12.832C8.64844 12.832 9.36328 12.6914 10.0195 12.4102C10.6992 12.1289 11.2852 11.7422 11.7773 11.25C12.293 10.7344 12.6914 10.1484 12.9727 9.49219C13.2539 8.8125 13.3945 8.08594 13.3945 7.3125C13.3945 6.53906 13.2539 5.82422 12.9727 5.16797C12.6914 4.48828 12.293 3.90234 11.7773 3.41016C11.2852 2.89453 10.6992 2.49609 10.0195 2.21484C9.36328 1.93359 8.64844 1.79297 7.875 1.79297C7.10156 1.79297 6.375 1.93359 5.69531 2.21484C5.03906 2.49609 4.45312 2.89453 3.9375 3.41016C3.44531 3.90234 3.05859 4.48828 2.77734 5.16797C2.49609 5.82422 2.35547 6.53906 2.35547 7.3125C2.35547 8.08594 2.49609 8.8125 2.77734 9.49219C3.05859 10.1484 3.44531 10.7344 3.9375 11.25C4.45312 11.7422 5.03906 12.1289 5.69531 12.4102C6.375 12.6914 7.10156 12.832 7.875 12.832Z">
+              </path>
+            </svg>
+          </button>
+        </form>
+        <div class="welcomeInfo">
+          <div class="infoComponent">
+            <img src="assets/comment.png" />
+            <p><span>2.8M</span> Posts</p>
+          </div>
+          <div class="infoComponent">
+            <img src="assets/user.png" />
+            <p><span>1.3M</span> Members</p>
+          </div>
+          <div class="infoComponent">
+            <img src="assets/browser.png" />
+            <p><span>601K</span> Online</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-column">
+        <div class="slider-text">
+          <h3>What's New</h3>
+          <p>If you want to know what is new around our <a href="#">SAP Community groups</a>, please check out this <a
+              href="#">What's New post</a>.</p>
+        </div>
+        <div class="slider-navigation">
+          <button class="left-arrow"></button>
+          <div class="slider-point">
+            <button>•</button>
+            <button>•</button>
+            <button>•</button>
+            <button>•</button>
+            <button>•</button>
+          </div>
+          <button class="right-arrow"></button>
+        </div>
+      </div>
+    </section>
+    <section class="community-component">
+      <h2>Explore SAP Community</h2>
+      <article onclick="window.location.href='#';">
+        <h4>CRM and Customer Experience</h4>
+        <img src="assets/comment-black.png">
+        <p>114832 Posts</p>
+      </article>
+      <article onclick="window.location.href='#';">
+        <h4>Enterprise Resource Planning</h4>
+        <img src="assets/comment-black.png">
+        <p>912960 Posts</p>
+      </article>
+      <article onclick="window.location.href='#';">
+        <h4>Financial Management</h4>
+        <img src="assets/comment-black.png">
+        <p>53831 Posts</p>
+      </article>
+      <article onclick="window.location.href='#';">
+        <h4>Human Capital Management</h4>
+        <img src="assets/comment-black.png">
+        <p>18236 Posts</p>
+      </article>
+      <article onclick="window.location.href='#';">
+        <h4>Product Lifecycle Management</h4>
+        <img src="assets/comment-black.png">
+        <p>19542 Posts</p>
+      </article>
+      <article onclick="window.location.href='#';">
+        <h4>Spend Management</h4>
+        <img src="assets/comment-black.png">
+        <p>41905 Posts</p>
+      </article>
+      <article onclick="window.location.href='#';">
+        <h4>Supply Chain Management</h4>
+        <img src="assets/comment-black.png">
+        <p>53798 Posts</p>
+      </article>
+      <article onclick="window.location.href='#';">
+        <h4>Technology</h4>
+        <img src="assets/comment-black.png">
+        <p>1034391 Posts</p>
+      </article>
+
+    </section>
+    <div class="component-aside">
+      <section class="recent-activity-component">
+        <div class="recent-activity-header">
+          <h2>Recent Activity</h2>
+          <form class="recent-activity-search">
+            <label>Sort by:</label>
+            <select name="sort-recent-activity">
+              <option value="Most recent">Most recent</option>
+              <option value="Most viewed" selected>Most viewed</option>
+              <option value="Most commented">Most commented</option>
+              <option value="Most liked">Most liked</option>
+            </select>
+            <button>
+              <a href="#">Sign In to Post</a>
+            </button>
+          </form>
+        </div>
+        <article class="recent-activity-card">
+          <div class="header-panel-card">
+            <img class="ava" src="img/ava1.jpg">
+            <div class="name-job">
+              <h5>smacli</h5>
+              <p class="job">Explorer</p>
             </div>
-            <nav>
-                <ul class="navigation">
-                    <li class="ButtMore">
-                        <button class="ButtProduct" id="ButtProduct" onclick="toggleDropdown(this)">Products and Technology</button>
-                        <div class="dropdown-content" id="dropdown-content" style="display: none;">
-                            <div class="dropdown-row">
-                                <ul>
-                                    <li class="titleLi">By Category</li>
-                                    <hr>
-                                    <li><a href="#">CRM and Customer Experience</a></li>
-                                    <li><a href="#">Enterprise Resource Planning</a></li>
-                                    <li><a href="#">Financial Management</a></li>
-                                    <li><a href="#">Human Capital Management</a></li>
-                                    <li><a href="#">Product Lifecycle Management</a></li>
-                                    <li><a href="#">Spend Management</a></li>
-                                    <li><a href="#">Supply Chain Management</a></li>
-                                    <li><a href="#">Technology</a></li>
-                                </ul>
-                                <ul>
-                                    <li class="titleLi">Related Content</li>
-                                    <hr>
-                                    <li><a href="#">All Blogs</a></li>
-                                    <li><a href="#">Questions about SAP Websites</a></li>
-                                    <li><a href="#">Blogs about SAP Websites</a></li>
-                                    <li><a href="#">All SAP Managed Tags</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="ButtMore">
-                        <button class="ButtProduct" id="ButtProduct" onclick="toggleDropdown(this)">Groups</button>
-                        <div class="dropdown-content" id="dropdown-content" style="display: none; left: 30vw;">
-                            <div class="dropdown-row">
-                                <ul>
-                                    <li class="titleLi">Activity Groups</li>
-                                    <hr>
-                                    <li><a href="#">Devtoberfest</a></li>
-                                    <li><a href="#">SAP CodeJam</a></li>
-                                    <li><a href="#">SAP TechEd</a></li>
-                                </ul>
-                                <ul>
-                                    <li class="titleLi">Industry Groups</li>
-                                    <hr>
-                                    <li><a href="#">Automotive</a></li>
-                                    <li><a href="#">Banking</a></li>
-                                    <li><a href="#">Oil, Gas, and Energy</a></li>
-                                    <li><a href="#">Retail</a></li>
-                                    <li><a href="#">Utilities</a></li>
-                                    <li><a href="#">View all Industry Groups</a></li>
-                                    
-                                </ul>
-                                <ul>
-                                    <li class="titleLi">Influence and Feedback Groups</li>
-                                    <hr>
-                                    <li><a href="#">SAP Community Event Organizers</a></li>
-                                    <li><a href="#">SAP Community Leaders and Advocates</a></li>
-                                    <li><a href="#">SAP Industry Analysts</a></li>
-                                    <li><a href="#">Meet our SAP Community Leaders</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown-row">
-                                <ul>
-                                    <li class="titleLi">Interest Groups</li>
-                                    <hr>
-                                    <li><a href="#">Application Development and Automation</a></li>
-                                    <li><a href="#">Artificial Intelligence and Machine Learning</a></li>
-                                    <li><a href="#">Community Coffee Corner</a></li>
-                                    <li><a href="#">Enterprise Architecture</a></li>
-                                    <li><a href="#">Integration</a></li>
-                                    <li><a href="#">SAP Learning Groups</a></li>
-                                    <li><a href="#">SAP Women in Tech</a></li>
-                                    <li><a href="#">Welcome Corner</a></li>
-                                    <li><a href="#">All Interest Groups</a></li>
-                                </ul>
-                                <ul>
-                                    <li class="titleLi">Location Groups</li>
-                                    <hr>
-                                    <li><a href="#">Americas</a></li>
-                                    <li><a href="#">Asia Pacific</a></li>
-                                    <li><a href="#">Europe</a></li>
-                                    <li><a href="#">Middle East and Africa</a></li>
-                                </ul>
-                                <ul>
-                                    <li class="titleLi">SAP SuccessFactors</li>
-                                    <hr>
-                                    <li><a href="#">SAP SuccessFactors</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="ButtNav"><a href="https://pages.community.sap.com/resources/partners">Partners</a></li>
-                    <li class="ButtNav"><a href="https://pages.community.sap.com/topics">Topics</a></li>
-                    <li class="ButtMore">
-                        <button class="ButtProduct" id="ButtProduct" onclick="toggleDropdown(this)">Events</button>
-                        <div class="dropdown-content" id="dropdown-content" style="display: none; left: 43vw;">
-                            <div class="dropdown-row">
-                                <ul>
-                                    <li><a href="#">Become an Event Organizer</a></li>
-                                    <li><a href="#">Application Lifecycle Management</a></li>
-                                    <li><a href="#">Devtoberfest</a></li>
-                                    <li><a href="#">Industries</a></li>
-                                    <li><a href="#">SAP CodeJam</a></li>
-                                    <li><a href="#">SAP Community</a></li>
-                                    <li><a href="#">SAP SuccessFactors</a></li>
-                                    <li><a href="#">User Groups</a></li>
-                                    <li><a href="#">View all Events</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="ButtNav"><a href="https://community.sap.com/t5/what-s-new/bg-p/whats-new">What's New</a></li>
-                    <li class="ButtMore">
-                        <button class="ButtProduct" id="ButtProduct" onclick="toggleDropdown(this)">Get Started</button>
-                        <div class="dropdown-content" id="dropdown-content" style="display: none; left: 50vw;">
-                            <div class="dropdown-row">
-                                <ul>
-                                    <li><a href="#">Welcome Corner</a></li>
-                                    <li><a href="#">FAQs</a></li>
-                                    <li><a href="#">Help Resources</a></li>
-                                    <li><a href="#">Legal Resources</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="rightLi">
-                        <button class="ButtProduct" id="ButtProduct" onclick="toggleDropdown(this)">Explore SAP</button>
-                        <div class="dropdown-content" id="dropdown-content" style="display: none; left: 5vw; width: 85vw; right: 5vw;">
-                            <div class="dropdown-row">
-                                <h3>Explore all areas of SAP</h3>
-                            </div>
-                            <div class="dropdown-row">
-                                <ul>
-                                    <li class="titleLi"><a href="#">Products <span>></span></a></li>
-                                    <hr>
-                                    <li><a href="#">SAP Business Suite</a></li>
-                                    <li><a href="#">Artificial intelligence</a></li>
-                                    <li><a href="#">Data and analytics</a></li>
-                                    <li><a href="#">Cloud ERP applications</a></li>
-                                    <li><a href="#">Technology platform</a></li>
-                                    <li><a href="#">Financial management</a></li>
-                                    <li><a href="#">Spend management</a></li>
-                                    <li><a href="#">Supply chain management</a></li>
-                                    <li><a href="#">Human capital management</a></li>
-                                    <li><a href="#">Customer experience</a></li>
-                                    <li><a href="#">SAP Business Network</a></li>
-                                    <hr style = "width: 30%; margin: 6px 0;"  >
-                                    <li><a href="#">View products A–Z</a></li>
-                                    <li><a href="#">View industries</a></li>
-                                    <li><a href="#">Try SAP</a></li>
-                                    <hr style = "width: 30%; margin: 6px 0;"  >
-                                    <li><a href="#">Partners</a></li>
-                                    <hr style = "width: 30%; margin: 6px 0;"  >
-                                    <li><a href="#">Services</a></li>
-                                </ul>
-                                <ul>
-                                    <li class="titleLi">Learning and support</li>
-                                    <hr>
-                                    <li><a href="#">Learning and certification</a></li>
-                                    <li><a href="#">Support</a></li>
-                                    <li><a href="#">Documentation</a></li>
-                                    <li><a href="#">Community</a></li>
-                                </ul>
-                                <ul>
-                                    <li class="titleLi">About</li>
-                                    <hr>
-                                    <li><a href="#">Company information</a></li>
-                                    <li><a href="#">Careers</a></li>
-                                    <li><a href="#">Customer stories</a></li>
-                                    <li><a href="#">Events</a></li>
-                                    <li><a href="#">Investor relations</a></li>
-                                    <li><a href="#">News center</a></li>
-                                    <li><a href="#">SAP Trust Center</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            <div class="actions">
-                <button class="search" id="search">
-                    <svg viewBox="0 0 18 17" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.1914 15.3281C17.3555 15.4922 17.4375 15.7031 17.4375 15.9609C17.4375 16.2188 17.3438 16.4414 17.1562 16.6289C16.9922 16.793 16.7812 16.875 16.5234 16.875C16.2656 16.875 16.0547 16.793 15.8906 16.6289L12.375 13.1133C11.7656 13.582 11.0742 13.957 10.3008 14.2383C9.55078 14.4961 8.74219 14.625 7.875 14.625C6.84375 14.625 5.88281 14.4375 4.99219 14.0625C4.10156 13.6875 3.32812 13.1719 2.67188 12.5156C2.01562 11.8594 1.5 11.0859 1.125 10.1953C0.75 9.30469 0.5625 8.34375 0.5625 7.3125C0.5625 6.28125 0.75 5.32031 1.125 4.42969C1.5 3.53906 2.01562 2.76562 2.67188 2.10938C3.32812 1.45312 4.10156 0.9375 4.99219 0.5625C5.88281 0.1875 6.84375 0 7.875 0C8.90625 0 9.86719 0.1875 10.7578 0.5625C11.6484 0.9375 12.4219 1.45312 13.0781 2.10938C13.7344 2.76562 14.25 3.53906 14.625 4.42969C15 5.32031 15.1875 6.28125 15.1875 7.3125C15.1875 8.17969 15.0469 9 14.7656 9.77344C14.5078 10.5234 14.1445 11.2031 13.6758 11.8125L17.1914 15.3281ZM7.875 12.832C8.64844 12.832 9.36328 12.6914 10.0195 12.4102C10.6992 12.1289 11.2852 11.7422 11.7773 11.25C12.293 10.7344 12.6914 10.1484 12.9727 9.49219C13.2539 8.8125 13.3945 8.08594 13.3945 7.3125C13.3945 6.53906 13.2539 5.82422 12.9727 5.16797C12.6914 4.48828 12.293 3.90234 11.7773 3.41016C11.2852 2.89453 10.6992 2.49609 10.0195 2.21484C9.36328 1.93359 8.64844 1.79297 7.875 1.79297C7.10156 1.79297 6.375 1.93359 5.69531 2.21484C5.03906 2.49609 4.45312 2.89453 3.9375 3.41016C3.44531 3.90234 3.05859 4.48828 2.77734 5.16797C2.49609 5.82422 2.35547 6.53906 2.35547 7.3125C2.35547 8.08594 2.49609 8.8125 2.77734 9.49219C3.05859 10.1484 3.44531 10.7344 3.9375 11.25C4.45312 11.7422 5.03906 12.1289 5.69531 12.4102C6.375 12.6914 7.10156 12.832 7.875 12.832Z"></path>
-                    </svg>
-                </button>
-                <button class="profile">
-                    <svg width="100%" height="100%" viewBox="0 0 18 18" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.5684 8.50769C13.8809 8.99988 14.9355 9.83191 15.7324 11.0038C16.5527 12.1522 16.9629 13.4764 16.9629 14.9764V16.9803C16.9629 17.285 16.8691 17.5311 16.6816 17.7186C16.5176 17.9061 16.2832 17.9999 15.9785 17.9999H1.98633C1.68164 17.9999 1.43555 17.9061 1.24805 17.7186C1.08398 17.5311 1.00195 17.285 1.00195 16.9803V14.9764C1.00195 13.4764 1.40039 12.1522 2.19727 11.0038C3.01758 9.83191 4.08398 8.99988 5.39648 8.50769C4.45898 7.57019 3.99023 6.41003 3.99023 5.02722C3.99023 4.3241 4.11914 3.66785 4.37695 3.05847C4.63477 2.4491 4.98633 1.92175 5.43164 1.47644C5.90039 1.03113 6.42773 0.679565 7.01367 0.421753C7.62305 0.16394 8.2793 0.0350342 8.98242 0.0350342C9.68555 0.0350342 10.3418 0.16394 10.9512 0.421753C11.5605 0.679565 12.0879 1.03113 12.5332 1.47644C12.9785 1.92175 13.3301 2.4491 13.5879 3.05847C13.8457 3.66785 13.9746 4.3241 13.9746 5.02722C13.9746 6.41003 13.5059 7.57019 12.5684 8.50769ZM8.98242 2.00378C8.13867 2.00378 7.42383 2.29675 6.83789 2.88269C6.27539 3.44519 5.99414 4.16003 5.99414 5.02722C5.99414 5.87097 6.27539 6.58582 6.83789 7.17175C7.42383 7.73425 8.13867 8.0155 8.98242 8.0155C9.82617 8.0155 10.5293 7.73425 11.0918 7.17175C11.6777 6.58582 11.9707 5.87097 11.9707 5.02722C11.9707 4.16003 11.6777 3.44519 11.0918 2.88269C10.5293 2.29675 9.82617 2.00378 8.98242 2.00378ZM14.959 14.9764C14.959 14.2733 14.8301 13.6288 14.5723 13.0428C14.3145 12.4335 13.9629 11.9061 13.5176 11.4608C13.0723 10.9921 12.5449 10.6288 11.9355 10.371C11.3496 10.1132 10.7051 9.98425 10.002 9.98425H7.99805C7.29492 9.98425 6.63867 10.1132 6.0293 10.371C5.41992 10.6288 4.89258 10.9921 4.44727 11.4608C4.00195 11.9061 3.65039 12.4335 3.39258 13.0428C3.13477 13.6288 3.00586 14.2733 3.00586 14.9764V15.996H14.959V14.9764Z"></path>
-                    </svg>
-                </button>
+            <div class="ratings">
+              <img src="assets/eye.png">
+              <p>4128822</p>
+              <img src="assets/comment-black.png">
+              <p>0</p>
+              <img src="assets/like.png">
+              <p>0</p>
             </div>
-        </header>
-        <article class="welcome">
-            <div class="leftColumn">
-                <h2>Welcome to SAP Community</h2>
-                <p>Connect and engage with our community to get answers, discuss best practices, and continually learn more about SAP solutions.</p>
-                <form class="searchMenu">
-                    <select name="searchs">
-                        <option value="All community" selected>All community</option>
-                        <option value="Knowledge base">Knowledge base</option>
-                        <option value="Users">Users</option>
-                        <option value="Managed tags">Managed tags</option>
-                    </select>
-                    <input type="text" placeholder="Search">
-                    <button class="search" id="search">
-                        <svg viewBox="0 0 18 17" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.1914 15.3281C17.3555 15.4922 17.4375 15.7031 17.4375 15.9609C17.4375 16.2188 17.3438 16.4414 17.1562 16.6289C16.9922 16.793 16.7812 16.875 16.5234 16.875C16.2656 16.875 16.0547 16.793 15.8906 16.6289L12.375 13.1133C11.7656 13.582 11.0742 13.957 10.3008 14.2383C9.55078 14.4961 8.74219 14.625 7.875 14.625C6.84375 14.625 5.88281 14.4375 4.99219 14.0625C4.10156 13.6875 3.32812 13.1719 2.67188 12.5156C2.01562 11.8594 1.5 11.0859 1.125 10.1953C0.75 9.30469 0.5625 8.34375 0.5625 7.3125C0.5625 6.28125 0.75 5.32031 1.125 4.42969C1.5 3.53906 2.01562 2.76562 2.67188 2.10938C3.32812 1.45312 4.10156 0.9375 4.99219 0.5625C5.88281 0.1875 6.84375 0 7.875 0C8.90625 0 9.86719 0.1875 10.7578 0.5625C11.6484 0.9375 12.4219 1.45312 13.0781 2.10938C13.7344 2.76562 14.25 3.53906 14.625 4.42969C15 5.32031 15.1875 6.28125 15.1875 7.3125C15.1875 8.17969 15.0469 9 14.7656 9.77344C14.5078 10.5234 14.1445 11.2031 13.6758 11.8125L17.1914 15.3281ZM7.875 12.832C8.64844 12.832 9.36328 12.6914 10.0195 12.4102C10.6992 12.1289 11.2852 11.7422 11.7773 11.25C12.293 10.7344 12.6914 10.1484 12.9727 9.49219C13.2539 8.8125 13.3945 8.08594 13.3945 7.3125C13.3945 6.53906 13.2539 5.82422 12.9727 5.16797C12.6914 4.48828 12.293 3.90234 11.7773 3.41016C11.2852 2.89453 10.6992 2.49609 10.0195 2.21484C9.36328 1.93359 8.64844 1.79297 7.875 1.79297C7.10156 1.79297 6.375 1.93359 5.69531 2.21484C5.03906 2.49609 4.45312 2.89453 3.9375 3.41016C3.44531 3.90234 3.05859 4.48828 2.77734 5.16797C2.49609 5.82422 2.35547 6.53906 2.35547 7.3125C2.35547 8.08594 2.49609 8.8125 2.77734 9.49219C3.05859 10.1484 3.44531 10.7344 3.9375 11.25C4.45312 11.7422 5.03906 12.1289 5.69531 12.4102C6.375 12.6914 7.10156 12.832 7.875 12.832Z"></path>
-                        </svg>
-                    </button>
-                </form>
-                <div class="welcomeInfo">
-                    <div class="infoComponent">
-                        <img src="assets/comment.png"/>
-                        <p><span>2.8M</span> Posts</p>
-                    </div>
-                    <div class="infoComponent">
-                        <img src="assets/user.png"/>
-                        <p><span>1.3M</span> Members</p>
-                    </div>
-                    <div class="infoComponent">
-                        <img src="assets/browser.png"/>
-                        <p><span>601K</span> Online</p>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <h4>ALALLALALALLA word-wrap: break-word; word-wrap: break-word; word-wrap: break-word; word-wrap:
+            break-word;LA</h4>
+          <p class="comment">Hello, We need to delete parked documents that are part of a prepayment flow because when
+            we try to post the parked invoice, we receive a message M8_2501 (see below). We follow note
+            https://me.sap.com/notes/2143933/E and implement</p>
+          <div class="images-card display-none">
+            <img src="img/image1.png">
+          </div>
+          <div class="footer-panel-card">
+            <p class="time">a minute ago</p>
+            <!--как правильно тут сделать ?-->
+            <p>Posted in <a>Enterprise Resource Planning Q&A<img src="assets/arrow-blue.png"></a></p>
+
+          </div>
         </article>
-    </body>
+        <article class="recent-activity-card">
+          <div class="header-panel-card">
+            <img class="ava" src="img/ava1.jpg">
+            <div class="name-job">
+              <h5>smacli</h5>
+              <p class="job">Explorer</p>
+            </div>
+            <div class="ratings">
+              <img src="assets/eye.png">
+              <p>4128822</p>
+              <img src="assets/comment-black.png">
+              <p>0</p>
+              <img src="assets/like.png">
+              <p>0</p>
+            </div>
+          </div>
+          <h4>ALALLALALALLA word-wrap: break-word; word-wrap: break-word; word-wrap: break-word; word-wrap:
+            break-word;LA</h4>
+          <p class="comment">Hello, We need to delete parked documents that are part of a prepayment flow because when
+            we try to post the parked invoice, we receive a message M8_2501 (see below). We follow note
+            https://me.sap.com/notes/2143933/E and implement</p>
+          <div class="images-card display-none">
+            <img src="img/image1.png ">
+          </div>
+          <div class="footer-panel-card">
+            <p class="time">a minute ago</p>
+            <!--как правильно тут сделать ?-->
+            <p>Posted in <a>Enterprise Resource Planning Q&A<img src="assets/arrow-blue.png"></a></p>
+          </div>
+        </article>
+        <article class="recent-activity-card">
+          <div class="header-panel-card">
+            <img class="ava" src="img/ava1.jpg">
+            <div class="name-job">
+              <h5>smacli</h5>
+              <p class="job">Explorer</p>
+            </div>
+            <div class="ratings">
+              <img src="assets/eye.png">
+              <p>4128822</p>
+              <img src="assets/comment-black.png">
+              <p>0</p>
+              <img src="assets/like.png">
+              <p>0</p>
+            </div>
+          </div>
+          <h4>ALALLALALALLA word-wrap: break-word; word-wrap: break-word; word-wrap: break-word; word-wrap:
+            break-word;LA</h4>
+          <p class="comment">Hello, We need to delete parked documents that are part of a prepayment flow because when
+            we try to post the parked invoice, we receive a message M8_2501 (see below). We follow note
+            https://me.sap.com/notes/2143933/E and implement</p>
+          <div class="images-card">
+            <img src="img/image1.png">
+          </div>
+          <div class="footer-panel-card">
+            <p class="time">a minute ago</p>
+            <!--как правильно тут сделать ?-->
+            <p>Posted in <a>Enterprise Resource Planning Q&A<img src="assets/arrow-blue.png"></a></p>
+          </div>
+        </article>
+        <article class="recent-activity-card">
+          <div class="header-panel-card">
+            <img class="ava" src="img/ava1.jpg">
+            <div class="name-job">
+              <h5>smacli</h5>
+              <p class="job">Explorer</p>
+            </div>
+            <div class="ratings">
+              <img src="assets/eye.png">
+              <p>4128822</p>
+              <img src="assets/comment-black.png">
+              <p>0</p>
+              <img src="assets/like.png">
+              <p>0</p>
+            </div>
+          </div>
+          <h4>ALALLALALALLA word-wrap: break-word; word-wrap: break-word; word-wrap: break-word; word-wrap:
+            break-word;LA</h4>
+          <p class="comment">Hello, We need to delete parked documents that are part of a prepayment flow because when
+            we try to post the parked invoice, we receive a message M8_2501 (see below). We follow note
+            https://me.sap.com/notes/2143933/E and implement</p>
+          <div class="images-card">
+            <img src="img/image1.png">
+          </div>
+          <div class="footer-panel-card">
+            <p class="time">a minute ago</p>
+            <!--как правильно тут сделать ?-->
+            <p>Posted in <a>Enterprise Resource Planning Q&A<img src="assets/arrow-blue.png"></a></p>
+          </div>
+        </article>
+        <article class="recent-activity-card">
+          <div class="header-panel-card">
+            <img class="ava" src="img/ava1.jpg">
+            <div class="name-job">
+              <h5>smacli</h5>
+              <p class="job">Explorer</p>
+            </div>
+            <div class="ratings">
+              <img src="assets/eye.png">
+              <p>4128822</p>
+              <img src="assets/comment-black.png">
+              <p>0</p>
+              <img src="assets/like.png">
+              <p>0</p>
+            </div>
+          </div>
+          <h4>ALALLALALALLA word-wrap: break-word; word-wrap: break-word; word-wrap: break-word; word-wrap:
+            break-word;LA</h4>
+          <p class="comment">Hello, We need to delete parked documents that are part of a prepayment flow because when
+            we try to post the parked invoice, we receive a message M8_2501 (see below). We follow note
+            https://me.sap.com/notes/2143933/E and implement</p>
+          <div class="images-card">
+            <img src="img/image1.png">
+          </div>
+          <div class="footer-panel-card">
+            <p class="time">a minute ago</p>
+            <!--как правильно тут сделать ?-->
+            <p>Posted in <a>Enterprise Resource Planning Q&A<img src="assets/arrow-blue.png"></a></p>
+          </div>
+        </article>
+        <div class="recent-activity-footer">
+          <button id="prev">Previous</button>
+          <button id="next">Next</button>
+        </div>
+      </section>
+      <aside>
+        <div class="top-aside">
+          <h4>Welcome to SAP Community!</h4>
+          <p class="header-text">These materials will help you participate and connect with other members.</p>
+          <div class="top-aside-tag">
+            <img src="assets/tag1.svg">
+            <div class="tag-text">
+              <h5><a>FAQs</a></h5>
+              <p>Find answers to basic questions about using SAP Community.</p>
+            </div>
+          </div>
+          <div class="top-aside-tag">
+            <img src="assets/tag2.svg">
+            <div class="tag-text">
+              <h5><a>Resources</a></h5>
+              <p>Learn about community rules, take our tutorial, and get support.</p>
+            </div>
+          </div>
+          <div class="top-aside-tag">
+            <img src="assets/tag3.svg">
+            <div class="tag-text">
+              <h5><a>Welcome Corner</a></h5>
+              <p>Introduce yourself and get to know other members.</p>
+            </div>
+          </div>
+          <div class="top-aside-tag">
+            <img src="assets/tag4.svg">
+            <div class="tag-text">
+              <h5><a>All SAP Managed Tags</a></h5>
+              <p>Check out the comprehensive A-Z list of SAP managed tags.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-aside">
+          <h4>Top Kudoed Authors</h4>
+          <div class="bottom-aside-authors">
+            <div class="authors-left">
+              <img class="ava" src="img/ava1.jpg">
+              <a href="#"> <img src="assets/SAP.svg">mausadasdasda</a>
+            </div>
+            <div class="authors-right">
+              <img src="assets/like.png">
+              <p>16</p>
+            </div>
+          </div>
+          <div class="bottom-aside-authors">
+            <div class="authors-left">
+              <img class="ava" src="img/ava1.jpg">
+              <a href="#"> <img class="display-none" src="assets/SAP.svg">123123asda</a>
+            </div>
+            <div class="authors-right">
+              <img src="assets/like.png">
+              <p>14</p>
+            </div>
+          </div>
+          <div class="bottom-aside-authors">
+            <div class="authors-left">
+              <img class="ava" src="img/ava1.jpg">
+              <a href="#"> <img class="display-none" src="assets/SAP.svg">mausadasdasda</a>
+            </div>
+            <div class="authors-right">
+              <img src="assets/like.png">
+              <p>16</p>
+            </div>
+          </div>
+          <div class="bottom-aside-authors">
+            <div class="authors-left">
+              <img class="ava" src="img/ava1.jpg">
+              <a href="#"> <img class="display-none" src="assets/SAP.svg">123123asda</a>
+            </div>
+            <div class="authors-right">
+              <img src="assets/like.png">
+              <p>14</p>
+            </div>
+          </div>
+          <div class="bottom-aside-authors">
+            <div class="authors-left">
+              <img class="ava" src="img/ava1.jpg">
+              <a href="#"> <img src="assets/SAP.svg">mausadasdasda</a>
+            </div>
+            <div class="authors-right">
+              <img src="assets/like.png">
+              <p>16</p>
+            </div>
+          </div>
+          <div class="bottom-aside-authors">
+            <div class="authors-left">
+              <img class="ava" src="img/ava1.jpg">
+              <a href="#"> <img src="assets/SAP.svg">123123asda</a>
+            </div>
+            <div class="authors-right">
+              <img src="assets/like.png">
+              <p>14</p>
+            </div>
+          </div>
+          <div class="bottom-aside-authors">
+            <div class="authors-left">
+              <img class="ava" src="img/ava1.jpg">
+              <a href="#"> <img src="assets/SAP.svg">mausadasdasda</a>
+            </div>
+            <div class="authors-right">
+              <img src="assets/like.png">
+              <p>16</p>
+            </div>
+          </div>
+          <div class="bottom-aside-authors">
+            <div class="authors-left">
+              <img class="ava" src="img/ava1.jpg">
+              <a href="#"> <img src="assets/SAP.svg">123123asda</a>
+            </div>
+            <div class="authors-right">
+              <img src="assets/like.png">
+              <p>14</p>
+            </div>
+          </div>
+          <div class="bottom-aside-authors">
+            <div class="authors-left">
+              <img class="ava" src="img/ava1.jpg">
+              <a href="#"> <img src="assets/SAP.svg">mausadasdasda</a>
+            </div>
+            <div class="authors-right">
+              <img src="assets/like.png">
+              <p>16</p>
+            </div>
+          </div>
+          <div class="bottom-aside-authors">
+            <div class="authors-left">
+              <img class="ava" src="img/ava1.jpg">
+              <a href="#"> <img src="assets/SAP.svg">123123asda</a>
+            </div>
+            <div class="authors-right">
+              <img src="assets/like.png">
+              <p>14</p>
+            </div>
+          </div>
+          <a href="#" class="view-all">View all<img src="assets/arrow-blue.png"></a></p>
+        </div>
+      </aside>
+    </div>
+    <section class="featured-topics">
+      <h2>Featured Topics</h2>
+      <article class="featured-topics-card">
+        <a href="#"><img src="img/image1.png"></a>
+        <h4><a href="#">SAP Developer News June 19th, 2025</a></h4>
+        <div class="ratings">
+          <img src="assets/eye.png">
+          <p>4128822</p>
+          <img src="assets/comment-black.png">
+          <p>0</p>
+          <img src="assets/like.png">
+          <p>0</p>
+        </div>
+        <p class="time">Thursday</p>
+      </article>
+      <article class="featured-topics-card">
+        <a href="#"><img src="img/image1.png"></a>
+        <h4><a href="#">SAP Developer News June 19th, 2025</a></h4>
+        <div class="ratings">
+          <img src="assets/eye.png">
+          <p>4128822</p>
+          <img src="assets/comment-black.png">
+          <p>0</p>
+          <img src="assets/like.png">
+          <p>0</p>
+        </div>
+        <p class="time">Thursday</p>
+      </article>
+      <article class="featured-topics-card">
+        <a href="#"><img src="img/image1.png"></a>
+        <h4><a href="#">SAP Developer News June 19th, 2025</a></h4>
+        <div class="ratings">
+          <img src="assets/eye.png">
+          <p>4128822</p>
+          <img src="assets/comment-black.png">
+          <p>0</p>
+          <img src="assets/like.png">
+          <p>0</p>
+        </div>
+        <p class="time">Thursday</p>
+      </article>
+      <article class="featured-topics-card">
+        <a href="#"><img src="img/image1.png"></a>
+        <h4><a href="#">SAP Developer News June 19th, 2025</a></h4>
+        <div class="ratings">
+          <img src="assets/eye.png">
+          <p>4128822</p>
+          <img src="assets/comment-black.png">
+          <p>0</p>
+          <img src="assets/like.png">
+          <p>0</p>
+        </div>
+        <p class="time">Thursday</p>
+      </article>
+      <article class="featured-topics-card">
+        <a href="#"><img src="img/image1.png"></a>
+        <h4><a href="#">SAP Developer News June 19th, 2025</a></h4>
+        <div class="ratings">
+          <img src="assets/eye.png">
+          <p>4128822</p>
+          <img src="assets/comment-black.png">
+          <p>0</p>
+          <img src="assets/like.png">
+          <p>0</p>
+        </div>
+        <p class="time">Thursday</p>
+      </article>
+      <article class="featured-topics-card">
+        <a href="#"><img src="img/image1.png"></a>
+        <h4><a href="#">SAP Developer News June 19th, 2025</a></h4>
+        <div class="ratings">
+          <img src="assets/eye.png">
+          <p>4128822</p>
+          <img src="assets/comment-black.png">
+          <p>0</p>
+          <img src="assets/like.png">
+          <p>0</p>
+        </div>
+        <p class="time">Thursday</p>
+      </article>
+      <button id="view-all" class="view-all">+ View all</button>
+    </section>
+  </main>
+  <div class="up">
+    <div id="back_to_top" class="back-to-top">
+      <svg xmlns="http://www.w3.org/2000/svg" style="transform: rotate(270deg);" width="24" height="24"
+        viewBox="0 0 24 24">
+        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+      </svg>
+    </div>
+  </div>
+  <footer>
+    <ul class="left-footer">
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Copyright</a></li>
+      <li><a href="#">Legal Disclosure</a></li>
+      <li><a href="#">Trademark</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Cookie Preferences</a></li>
+    </ul>
+    <div class="right-footer">
+      <p>Follow</p>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512">
+          <path
+            d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229">
+          </path>
+        </svg></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568 501">
+          <path
+            d="M123.121 33.6637C188.241 82.5526 258.281 181.681 284 234.873C309.719 181.681 379.759 82.5526 444.879 33.6637C491.866 -1.61183 568 -28.9064 568 57.9464C568 75.2916 558.055 203.659 552.222 224.501C531.947 296.954 458.067 315.434 392.347 304.249C507.222 323.8 536.444 388.56 473.333 453.32C353.473 576.312 301.061 422.461 287.631 383.039C285.169 375.812 284.017 372.431 284 375.306C283.983 372.431 282.831 375.812 280.369 383.039C266.939 422.461 214.527 576.312 94.6667 453.32C31.5556 388.56 60.7778 323.8 175.653 304.249C109.933 315.434 36.0535 296.954 15.7778 224.501C9.94525 203.659 0 75.2916 0 57.9464C0 -28.9064 76.1345 -1.61183 123.121 33.6637Z">
+          </path>
+        </svg>
+      </a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+          <path
+            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+          </path>
+        </svg>
+      </a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512">
+          <path
+            d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <script src="main.js"></script>
+  </footer>
+</body>
+
 </html>
+
+<!--
+  Правильно article без <a> и с onclick ?
+  стоит разбивать большие флексы на болие маленькие логически ?
+  можно в p сувать a ?
+  как пагинацию правильно делать ? 
+  в <h5> сувать a ?
+  обязательно чтобы теги в моб и десктоп версиях совпадали ?
+  как all-screen отцентровать
+  как правильно доделать header
+-->

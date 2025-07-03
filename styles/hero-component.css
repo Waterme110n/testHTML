@@ -1,0 +1,258 @@
+.hero-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #0040b0;
+  margin-top: 40px;
+  padding: 24px;
+  height: fit-content;
+
+}
+
+@media (min-width: 768px) {
+  .hero-component {
+    padding: 58px 13vw;
+  }
+}
+
+
+@media (min-width: 1330px) {
+  .hero-component {
+    flex-direction: row;
+  }
+}
+
+.hero-component .left-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1330px) {
+  .hero-component .left-column {
+    width: 40vw;
+  }
+}
+
+.hero-component .left-column p {
+  color: white;
+  font-family: "72 Brand Variable", sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  padding-bottom: 16px;
+}
+
+@media (min-width: 1330px) {
+  .hero-component .left-column p {
+    font-size: 24px;
+  }
+}
+
+.hero-component .left-column .searchMenu {
+  position: relative;
+  margin-top: 8px;
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  border: 1px solid #585656;
+  border-radius: 100px 100px 100px 100px;
+  background-color: white;
+}
+
+.searchMenu select {
+  display: none;
+}
+
+@media (min-width: 1330px) {
+  .searchMenu select {
+    display: block;
+    font-size: 16px;
+    width: 26%;
+    color: #475e75;
+    font-family: "72 Brand Variable", sans-serif;
+    border-radius: 100px 0px 0px 100px;
+    padding: 6px 24px 6px 16px;
+    border: none;
+  }
+}
+
+.searchMenu input[type=text] {
+  border-radius: 100px;
+  border: 1px solid #585656;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  padding: 12px 60px 12px 20px;
+  color: #475e75;
+  flex: 1;
+
+}
+
+@media (min-width: 1330px) {
+  .searchMenu input[type=text] {
+    border-radius: 0px 100px 100px 0;
+  }
+}
+
+.searchMenu .search {
+  display: block;
+  position: absolute;
+  right: 10px;
+  color: #475e75;
+  width: 15px;
+  background-color: none;
+  border: none;
+  top: 12px;
+}
+
+@media (min-width: 1330px) {
+  .searchMenu .search {
+    top: 0px;
+  }
+}
+
+
+.hero-component .left-column .welcomeInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 24px;
+}
+
+@media(min-width: 1330px) {
+  .hero-component .left-column .welcomeInfo {
+    flex-direction: row;
+    width: 60%;
+  }
+
+}
+
+.welcomeInfo .infoComponent {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 18px;
+  margin-right: 24px;
+}
+
+.infoComponent img {
+  width: 18px;
+  height: 18px;
+  padding-right: 5px;
+
+}
+
+.welcomeInfo .infoComponent p {
+  font-size: 18px;
+}
+
+.welcomeInfo .infoComponent span {
+  font-weight: 700;
+
+}
+
+
+
+.hero-component .right-column {
+  display: flex;
+  flex-direction: column;
+  width: auto
+}
+
+.right-column .slider-text {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #ebf8ff;
+  width: 100%;
+  box-sizing: border-box;
+  height: 40%;
+  padding: 24px;
+}
+
+@media(min-width: 1330px) {
+  .right-column .slider-text {
+    width: 30vw;
+    box-sizing: inherit;
+  }
+}
+
+.slider-text h3 {
+  font-family: "72 Brand Variable", sans-serif;
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.slider-text p {
+  color: #223548;
+  font-family: "72 Brand Variable", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.slider-text a {
+  text-decoration: underline;
+  color: #0057d2;
+}
+
+.slider-text a:hover {
+  color: #003d92;
+}
+
+.slider-text a:active {
+  color: #001533;
+}
+
+.slider-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.slider-navigation .left-arrow,
+.slider-navigation .right-arrow {
+  border: none;
+  background-color: transparent;
+  background-image: url(/testHTML/assets/arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3vw;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+@media(min-width: 1330px) {
+  .slider-navigation .left-arrow,
+  .slider-navigation .right-arrow {
+    width: 1vw;
+  }
+}
+
+
+.slider-navigation .left-arrow:hover,
+.slider-navigation .right-arrow:hover {
+  opacity: 0.7;
+  transition: opacity 0.5s;
+}
+
+.slider-navigation .left-arrow {
+  transform: rotate(180deg);
+}
+
+.slider-navigation .slider-point {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+
+.slider-point button {
+  border: none;
+  background: none;
+  color: #8396A8;
+}
+
+.slider-point button:hover {
+  transform: scale(2);
+}
