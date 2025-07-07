@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="styles/hero-component.css">
   <link rel="stylesheet" href="styles/community-component.css">
   <link rel="stylesheet" href="styles/recent-activity-component.css">
-  <link rel="stylesheet" href="styles/asside.css">
   <link rel="stylesheet" href="styles/featured-topics.css">
   <link rel="stylesheet" href="styles/footer.css">
   <title>test</title>
@@ -39,7 +38,7 @@
         <li class="button-more">
           <button class="button-product" id="button-product" onclick="toggleDropdown(this)">Products and
             Technology</button>
-          <div class="dropdown-content-off two-columns" id="dropdown-content">
+          <div class="dropdown-content dropdown-content-off two-columns" id="dropdown-content">
             <ul>
               <li class="titleLi">By Category</li>
               <hr>
@@ -64,7 +63,7 @@
         </li>
         <li class="button-more">
           <button class="button-product" id="button-product" onclick="toggleDropdown(this)">Groups</button>
-          <div class="dropdown-content-off three-columns" id="dropdown-content">
+          <div class="dropdown-content dropdown-content-off three-columns" id="dropdown-content">
             <ul>
               <li class="titleLi">Activity Groups</li>
               <hr>
@@ -123,7 +122,7 @@
         <li class="button-navigation"><a href="https://pages.community.sap.com/topics">Topics</a></li>
         <li class="button-more">
           <button class="button-product" id="button-product" onclick="toggleDropdown(this)">Events</button>
-          <div class="dropdown-content-off" id="dropdown-content">
+          <div class="dropdown-content dropdown-content-off" id="dropdown-content">
             <ul>
               <li><a href="#">Become an Event Organizer</a></li>
               <li><a href="#">Application Lifecycle Management</a></li>
@@ -141,7 +140,7 @@
         </li>
         <li class="button-more">
           <button class="button-product" id="button-product" onclick="toggleDropdown(this)">Get Started</button>
-          <div class="dropdown-content-off" id="dropdown-content">
+          <div class="dropdown-content dropdown-content-off" id="dropdown-content">
             <ul>
               <li><a href="#">Welcome Corner</a></li>
               <li><a href="#">FAQs</a></li>
@@ -152,7 +151,7 @@
         </li>
         <li class="button-right">
           <button class="button-product" id="button-product" onclick="toggleDropdown(this)">Explore SAP</button>
-          <div class="dropdown-content-off all-screen" id="dropdown-content">
+          <div class="dropdown-content dropdown-content-off all-screen" id="dropdown-content">
             <h3>Explore all areas of SAP</h3>
             <ul>
               <li class="titleLi"><a href="#">Products <span>></span></a></li>
@@ -264,11 +263,13 @@
         <div class="slider-navigation">
           <button class="left-arrow"></button>
           <div class="slider-point">
-            <button>•</button>
-            <button>•</button>
-            <button>•</button>
-            <button>•</button>
-            <button>•</button>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
           </div>
           <button class="right-arrow"></button>
         </div>
@@ -276,63 +277,60 @@
     </section>
     <section class="community-component">
       <h2>Explore SAP Community</h2>
-      <article onclick="window.location.href='#';">
-        <h4>CRM and Customer Experience</h4>
+      <a href="#">
+        <h3>CRM and Customer Experience</h3>
         <img src="assets/comment-black.png">
         <p>114832 Posts</p>
-      </article>
-      <article onclick="window.location.href='#';">
-        <h4>Enterprise Resource Planning</h4>
+      </a>
+      <a href="#">
+        <h3>Enterprise Resource Planning</h3>
         <img src="assets/comment-black.png">
         <p>912960 Posts</p>
-      </article>
-      <article onclick="window.location.href='#';">
-        <h4>Financial Management</h4>
+      </a>
+      <a href="#">
+        <h3>Financial Management</h3>
         <img src="assets/comment-black.png">
         <p>53831 Posts</p>
-      </article>
-      <article onclick="window.location.href='#';">
-        <h4>Human Capital Management</h4>
+      </a>
+      <a href="#">
+        <h3>Human Capital Management</h3>
         <img src="assets/comment-black.png">
         <p>18236 Posts</p>
-      </article>
-      <article onclick="window.location.href='#';">
-        <h4>Product Lifecycle Management</h4>
+      </a>
+      <a href="#">
+        <h3>Product Lifecycle Management</h3>
         <img src="assets/comment-black.png">
         <p>19542 Posts</p>
-      </article>
-      <article onclick="window.location.href='#';">
-        <h4>Spend Management</h4>
+      </a>
+      <a href="#">
+        <h3>Spend Management</h3>
         <img src="assets/comment-black.png">
         <p>41905 Posts</p>
-      </article>
-      <article onclick="window.location.href='#';">
-        <h4>Supply Chain Management</h4>
+      </a>
+      <a href="#">
+        <h3>Supply Chain Management</h3>
         <img src="assets/comment-black.png">
         <p>53798 Posts</p>
-      </article>
-      <article onclick="window.location.href='#';">
-        <h4>Technology</h4>
+      </a>
+      <a href="#">
+        <h3>Technology</h3>
         <img src="assets/comment-black.png">
         <p>1034391 Posts</p>
-      </article>
-
+      </a>
     </section>
-    <div class="component-aside">
+    <div class="component-activity-communite">
       <section class="recent-activity-component">
         <div class="recent-activity-header">
           <h2>Recent Activity</h2>
           <form class="recent-activity-search">
-            <label>Sort by:</label>
+            <label for="sort-recent-activity">Sort by:</label>
             <select name="sort-recent-activity">
               <option value="Most recent">Most recent</option>
               <option value="Most viewed" selected>Most viewed</option>
               <option value="Most commented">Most commented</option>
               <option value="Most liked">Most liked</option>
             </select>
-            <button>
-              <a href="#">Sign In to Post</a>
-            </button>
+            <a class="sign-in" href="#">Sign In to Post</a>
           </form>
         </div>
         <article class="recent-activity-card">
@@ -491,7 +489,7 @@
           <button id="next">Next</button>
         </div>
       </section>
-      <aside>
+      <section class="right-activity-component">
         <div class="top-aside">
           <h4>Welcome to SAP Community!</h4>
           <p class="header-text">These materials will help you participate and connect with other members.</p>
@@ -628,7 +626,7 @@
           </div>
           <a href="#" class="view-all">View all<img src="assets/arrow-blue.png"></a></p>
         </div>
-      </aside>
+      </section>
     </div>
     <section class="featured-topics">
       <h2>Featured Topics</h2>
