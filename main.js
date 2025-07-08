@@ -3,18 +3,15 @@ function toggleDropdown(button) {
 
   if (dropdown.classList.contains('dropdown-content-off')) {
     dropdown.classList.remove('dropdown-content-off');
-    dropdown.classList.add('dropdown-content');
     button.classList.add('pressed');
   } else {
     dropdown.classList.add('dropdown-content-off');
-    dropdown.classList.remove('dropdown-content');
     button.classList.remove('pressed');
   }
 }
 
 var dropdownContents = document.querySelectorAll('.dropdown-content');
 dropdownContents.forEach(function (dropdown) {
-  dropdown.classList.remove('dropdown-content');
   dropdown.classList.add('dropdown-content-off');
 });
 
@@ -33,7 +30,7 @@ showPage(currentPage);
 
 function showPage(page) {
   articles.forEach((article, index) => {
-    if (index >= page * articlesPerPage && index < (page + 1) * articlesPerPage) {
+    if ((index >= (page * articlesPerPage)) && (index < (page + 1) * articlesPerPage)) {
       article.classList.add('recent-activity-card');
       article.classList.remove('display-none');
     } else {
@@ -43,14 +40,14 @@ function showPage(page) {
   });
 }
 
-document.getElementById('prev').addEventListener('click', () => {
+document.querySelector('.recent-activity-footer #prev').addEventListener('click', () => {
   if (currentPage > 0) {
     currentPage--;
     showPage(currentPage);
   }
 });
 
-document.getElementById('next').addEventListener('click', () => {
+document.querySelector('.recent-activity-footer #next').addEventListener('click', () => {
   if ((currentPage + 1) * articlesPerPage < articles.length) {
     currentPage++;
     showPage(currentPage);
@@ -58,15 +55,15 @@ document.getElementById('next').addEventListener('click', () => {
 });
 
 /*view more*/
-const articles2 = document.querySelectorAll('.featured-topics-card');
-let currentPage2 = 0;
-let articlesPerPage3 = 3;
+const featuredTopicsСard = document.querySelectorAll('.featured-topics-card');
+let featuredTopicsСardPage = 0;
+let featuredTopicsСardPerPage = 3;
 
-showPage2(currentPage2);
+showPage2(featuredTopicsСardPage);
 
 function showPage2(page) {
-  articles2.forEach((article, index) => {
-    if (index >= page * articlesPerPage3 && index < (page + 1) * articlesPerPage3) {
+  featuredTopicsСard.forEach((article, index) => {
+    if (index >= page * featuredTopicsСardPerPage && index < (page + 1) * featuredTopicsСardPerPage) {
       article.classList.add('featured-topics-card');
       article.classList.remove('display-none');
     } else {
@@ -80,12 +77,12 @@ let viewAll = document.getElementById('view-all')
 viewAll.addEventListener('click', () => {
   if( viewAll.textContent == "+ View all"){
     viewAll.textContent = "Close"
-    articlesPerPage3 = 6;
+    featuredTopicsСardPerPage = 6;
   } else{
     viewAll.textContent = "+ View all"
-    articlesPerPage3 = 3;
+    featuredTopicsСardPerPage = 3;
   }
-  showPage2(currentPage2);  
+  showPage2(featuredTopicsСardPage);  
 });
 
 /*back to top*/
